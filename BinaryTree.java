@@ -77,9 +77,21 @@ public class BinaryTree {
 	{
 		if(node == null) return;
 		printTree(node.left);
-		printTree(node.data+ " ");
+		println(node.data+ " ");
 		printTree(node.right);
 	}
+	public void printPostOrder() 
+	{
+		printPostOrder(root);
+	}
+	private void printPostOrder(Node node) 
+	{
+		if(node == null) return;
+		printPostOrder(node.left);
+		printPostOrder(node.right);
+		println(node.data + " ");
+	}
+	
 }
 
 
