@@ -50,6 +50,16 @@ public class BinaryTree {
 		if(node == null) return 0;
 		return size(node.left) + size(node.right) + 1;
 	}
+	public int maxDepth() 
+	{
+		return maxDepth(root);
+	}
+	private int maxDepth(Node node) 
+	{
+		int count;
+		if(size(node.left) <= size(node.right)) return size(node.right + 1);
+		else return size(node.left + 1);
+	}
 }
 
 
