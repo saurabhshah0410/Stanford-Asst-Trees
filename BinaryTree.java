@@ -69,6 +69,17 @@ public class BinaryTree {
 		if(node.left == null) return node.data;
 		return minValue(node.left);
 	}
+	public void printTree() 
+	{
+		printTree(root);
+	}
+	private void printTree(Node node)
+	{
+		if(node == null) return;
+		printTree(node.left);
+		printTree(node.data+ " ");
+		printTree(node.right);
+	}
 }
 
 
