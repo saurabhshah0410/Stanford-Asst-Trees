@@ -34,4 +34,24 @@ public class BinaryTree {
 			node.right = insert(node.right,key);
 		return(node) ;
 	}
+	public void build123() 
+	{
+		BinaryTree();
+		root = insert(root,2);
+		root = insert(root,1);
+		root = insert(root,3);
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
