@@ -60,6 +60,15 @@ public class BinaryTree {
 		if(size(node.left) <= size(node.right)) return size(node.right + 1);
 		else return size(node.left + 1);
 	}
+	public int minValue() 
+	{
+		return minValue(root);
+	}
+	private int minValue(Node node)
+	{
+		if(node.left == null) return node.data;
+		return minValue(node.left);
+	}
 }
 
 
