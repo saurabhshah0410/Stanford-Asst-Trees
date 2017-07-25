@@ -41,6 +41,15 @@ public class BinaryTree {
 		root = insert(root,1);
 		root = insert(root,3);
 	}
+	public int size() 
+	{
+		return size(root);
+	}
+	private int size(Node node)
+	{
+		if(node == null) return 0;
+		return size(node.left) + size(node.right) + 1;
+	}
 }
 
 
