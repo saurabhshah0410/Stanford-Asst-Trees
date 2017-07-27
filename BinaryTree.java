@@ -127,7 +127,7 @@ public class BinaryTree {
 	{
 		for(int i = 0;i < pathlen;i++)
 		{
-			System.out.println(array[i];
+			System.out.println(array[i]);
 		}
 		System.out.println();
 	}
