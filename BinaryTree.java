@@ -91,7 +91,19 @@ public class BinaryTree {
 		printPostOrder(node.right);
 		println(node.data + " ");
 	}
-	
+	public boolean hasPathSum(int sum) 
+	{
+		return hasPathSum(root,sum);
+	}
+	private boolean hasPathSum(Node node,int sum)
+	{
+		if(node == null) return sum == 0;
+		else
+		{
+			int subsum = sum-node.data;
+			return(hasPathSum(node.left,subsum) || hasPathSum(node.right,subsum));
+		}
+	}
 }
 
 
