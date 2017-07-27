@@ -104,6 +104,34 @@ public class BinaryTree {
 			return(hasPathSum(node.left,subsum) || hasPathSum(node.right,subsum));
 		}
 	}
+	public void printPaths()
+	{
+		int[] path = new int[1000];
+		printPathsRecur(root,path,0);
+	}
+	private void printPathsRecur(Node node,int[] path,int pathlen)
+	{
+		if(node == null) return;
+		path[pathlen++] = node.data;
+		if(node.left == null && node.right == null) 
+		{
+			printArray(path,pathlen);
+		}
+		else 
+		{
+			printPathsRecur(node.left,path,pathlen);
+			printPathsRecur(node.right,path,pathlen);
+		}	
+	}
+	private void printArray(int[] array,int pathlen)
+	{
+		for(int i = 0;i < pathlen;i++)
+		{
+			System.out.println(array[i];
+		}
+		System.out.println();
+	}
+	
 }
 
 
