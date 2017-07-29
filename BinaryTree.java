@@ -57,8 +57,8 @@ public class BinaryTree {
 	private int maxDepth(Node node) 
 	{
 		int count;
-		if(size(node.left) <= size(node.right)) return size(node.right + 1);
-		else return size(node.left + 1);
+		if(size(node.left) <= size(node.right)) return size(node.right) + 1;
+		else return size(node.left) + 1;
 	}
 	public int minValue() 
 	{
@@ -77,7 +77,7 @@ public class BinaryTree {
 	{
 		if(node == null) return;
 		printTree(node.left);
-		println(node.data+ " ");
+		System.out.println(node.data+ " ");
 		printTree(node.right);
 	}
 	public void printPostOrder() 
@@ -89,7 +89,7 @@ public class BinaryTree {
 		if(node == null) return;
 		printPostOrder(node.left);
 		printPostOrder(node.right);
-		println(node.data + " ");
+		System.out.println(node.data + " ");
 	}
 	public boolean hasPathSum(int sum) 
 	{
